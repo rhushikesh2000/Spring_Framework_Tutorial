@@ -5,22 +5,24 @@
 
 Create a Maven project by using the Wizard.
 
-![maven project](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/2bce3446-8cdf-49d6-8bd4-d0d286787a68)
 
+![maven project](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/ef2978fc-721e-410c-bfe0-377f5d1b53fc)
 
 click on next ,
 
-![maven 02](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/813392a0-2dae-46a9-bc9f-2e993a5024ab)
+![maven 02](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/ff6a6329-db2e-47c1-8a7a-0923fab60f6e)
 
 
 Select Maven-quickstart ,
 
-![maven 03](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/38abf0d4-88aa-4f79-aa44-edace058c1bd)
+
+![maven 03](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/6a7450f8-a4a4-4989-a973-aacd63dd02d7)
 
 
 GroupId identifies the project uniquely across all projects, so we need to enforce a naming schema. ArtifactId is the name of the jar without version. and click on finish
 
-![maven 04](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/32a1718c-6c02-4479-9a89-1d015d405d30)
+
+![maven 04](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/b4d8a763-91af-412c-9b70-6c22c4e93167)
 
 2. Add Spring Dependency
      ---
