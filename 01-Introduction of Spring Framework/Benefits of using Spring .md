@@ -1,4 +1,4 @@
-## Spring Framework in Java: Features 
+## Spring Framework in Java: advantages 
 Using the Spring framework, developers can leverage the below-listed advantages: 
 
 - Pre-defined Templates
