@@ -8,7 +8,9 @@ Now let us proceed to write a simple Spring Application, which will print "Hello
   ---
 The first step is to create a simple Java Project using Eclipse IDE. Follow the option File → New → Project and finally select Java Project wizard from the wizard list. Now name your project as HelloSpring using the wizard window as follows −
 
-![hello_spring_wizard](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/15da96de-a842-418e-8251-c67a3bb42616)
+![hello_spring_wizard](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/955bf928-05a5-4c4a-aeeb-20adf170007c)
+
+
 
 Once your project is created successfully, you will have the following content in your Project Explorer −
 
@@ -34,7 +36,8 @@ To run this example, you need to load only spring core jar files.
 As a second step let us add Spring Framework and common logging API libraries in our project. To do this, right-click on your project name HelloSpring and then follow the following option available in the context menu − Build Path → Configure Build Path to display the Java Build Path window as follows −
 
 
-![java_build_path](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/2f4ae3b1-d292-4e1b-ac6f-36c8bf595626)
+![java_build_path](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/51715819-c4b4-469c-9e65-34315cd12f55)
+
 
 Now use Add External JARs button available under the Libraries tab to add the following core JARs from Spring Framework and Common Logging installation directories −
 
@@ -45,7 +48,8 @@ Now let us create actual source files under the HelloSpring project. First we ne
 Next we will create HelloWorld.java and MainApp.java files under the com.firtspring package.
 
 
-![spring_source_files](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/433899ab-fca7-4a5e-b66b-53d456ed6e9e) 
+![spring_source_files](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/87f5fc1d-deb8-483e-b8a8-665f36d91212)
+
 
 Here is the content of HelloWorld.java file −
 ~~~java
