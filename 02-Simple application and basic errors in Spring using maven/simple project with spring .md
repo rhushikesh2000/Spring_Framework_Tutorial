@@ -37,7 +37,9 @@ To run this example, you need to load only spring core jar files.
 As a second step let us add Spring Framework and common logging API libraries in our project. To do this, right-click on your project name HelloSpring and then follow the following option available in the context menu − Build Path → Configure Build Path to display the Java Build Path window as follows −
 
 
-![java_build_path](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/51715819-c4b4-469c-9e65-34315cd12f55)
+
+![spring jars](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/3e8ee684-1f92-4988-9a30-a5ccae7dd460)
+
 
 
 Now use Add External JARs button available under the Libraries tab to add the following core JARs from Spring Framework and Common Logging installation directories −
@@ -47,9 +49,6 @@ Now use Add External JARs button available under the Libraries tab to add the fo
 Now let us create actual source files under the HelloSpring project. First we need to create a package called com.firtspring. To do this, right click on src in package explorer section and follow the option − New → Package.
 
 Next we will create HelloWorld.java and MainApp.java files under the com.firtspring package.
-
-
-![spring_source_files](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/87f5fc1d-deb8-483e-b8a8-665f36d91212)
 
 
 Here is the content of HelloWorld.java file −
