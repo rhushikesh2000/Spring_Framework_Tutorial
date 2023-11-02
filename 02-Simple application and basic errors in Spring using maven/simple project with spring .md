@@ -8,8 +8,9 @@ Now let us proceed to write a simple Spring Application, which will print "Hello
   ---
 The first step is to create a simple Java Project using Eclipse IDE. Follow the option File → New → Project and finally select Java Project wizard from the wizard list. Now name your project as HelloSpring using the wizard window as follows −
 
-![hello_spring_wizard](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/955bf928-05a5-4c4a-aeeb-20adf170007c)
 
+
+![simple java project](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/1c1da444-a6f4-4eb7-b4e0-fbbdcf250823)
 
 
 Once your project is created successfully, you will have the following content in your Project Explorer −
