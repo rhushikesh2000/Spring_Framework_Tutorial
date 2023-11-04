@@ -1,0 +1,220 @@
+# Dependency Injection by setter method
+
+We can inject the dependency by setter method also. The <property> subelement of <bean> is used for setter injection. Here we are going to inject
+
+- primitive and String-based values
+- Dependent object (contained object)
+- Collection values etc.
+
+### 1. Injecting primitive and string-based values by setter method
+  ---
+
+Let's see the simple example to inject primitive and string-based values by setter method. We have created three files here:
+
+- Employee.java
+- applicationContext.xml
+- Test.java
+
+It is a simple class containing three fields id, name and city with its setters and getters and a method to display these informations.
+
+~~~java
+package com.setter;  
+  
+public class Employee {  
+private int id;  
+private String name;  
+private String city;  
+  
+public int getId() {  
+    return id;  
+}  
+public void setId(int id) {  
+    this.id = id;  
+}  
+public String getName() {  
+    return name;  
+}  
+public void setName(String name) {  
+    this.name = name;  
+}  
+  
+public String getCity() {  
+    return city;  
+}  
+public void setCity(String city) {  
+    this.city = city;  
+}  
+void display(){  
+    System.out.println(id+" "+name+" "+city);  
+}  
+  
+}
+
+~~~
+
+applicationContext.xml
+---
+We are providing the information into the bean by this file. The property element invokes the setter method. The value subelement of property will assign the specified value.
+~~~java
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean id="obj" class="com.setter.Employee">  
+<property name="id">  
+<value>20</value>  
+</property>  
+<property name="name">  
+<value>Arun</value>  
+</property>  
+<property name="city">  
+<value>ghaziabad</value>  
+</property>  
+  
+</bean>  
+  
+</beans>  
+~~~
+
+Test.java
+
+This class gets the bean from the applicationContext.xml file and calls the display method.
+
+~~~java
+package com.setter;  
+  
+import org.springframework.beans.factory.BeanFactory;  
+import org.springframework.beans.factory.xml.XmlBeanFactory;  
+import org.springframework.core.io.*;  
+  
+public class Test {  
+    public static void main(String[] args) {  
+          
+        Resource r=new ClassPathResource("applicationContext.xml");  
+        BeanFactory factory=new XmlBeanFactory(r);  
+          
+        Employee e=(Employee)factory.getBean("obj");  
+        s.display();  
+          
+    }  
+}
+
+~~~
+Output:
+~~~java
+20 Arun ghaziabad
+~~~
+
+#### 2. Setter Injection with Dependent Object Example :
+
+Like Constructor Injection, we can inject the dependency of another bean using setters. In such case, we use property element. Here, our scenario is Employee HAS-A Address. The Address class object will be termed as the dependent object. Let's see the Address class first:
+
+- Address.java
+  
+This class contains four properties, setters and getters and toString() method.
+
+~~~java
+
+package com.setter;  
+  
+public class Address {  
+private String addressLine1,city,state,country;  
+  
+//getters and setters  
+  
+public String toString(){  
+    return addressLine1+" "+city+" "+state+" "+country;  
+}  
+- Employee.java
+
+It contains three properties id, name and address(dependent object) , setters and getters with displayInfo() method.
+
+package com.javatpoint;  
+  
+public class Employee {  
+private int id;  
+private String name;  
+private Address address;  
+  
+//setters and getters  
+  
+void displayInfo(){  
+    System.out.println(id+" "+name);  
+    System.out.println(address);  
+}  
+}
+~~~
+
+- applicationContext.xml
+  
+The ref attribute of property elements is used to define the reference of another bean.
+
+~~~java
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean id="address1" class="com.setter.Address">  
+<property name="addressLine1" value="51,Lohianagar"></property>  
+<property name="city" value="Ghaziabad"></property>  
+<property name="state" value="UP"></property>  
+<property name="country" value="India"></property>  
+</bean>  
+  
+<bean id="obj" class="com.setter.Employee">  
+<property name="id" value="1"></property>  
+<property name="name" value="Sachin Yadav"></property>  
+<property name="address" ref="address1"></property>  
+</bean>  
+  
+</beans>
+
+~~~
+
+- Test.java
+  
+This class gets the bean from the applicationContext.xml file and calls the displayInfo() method.
+
+~~~java
+package com.setter;  
+  
+import org.springframework.beans.factory.BeanFactory;  
+import org.springframework.beans.factory.xml.XmlBeanFactory;  
+import org.springframework.context.ApplicationContext;  
+import org.springframework.context.support.ClassPathXmlApplicationContext;  
+import org.springframework.core.io.ClassPathResource;  
+import org.springframework.core.io.Resource;  
+  
+public class Test {  
+public static void main(String[] args) {  
+    Resource r=new ClassPathResource("applicationContext.xml");  
+    BeanFactory factory=new XmlBeanFactory(r);  
+      
+    Employee e=(Employee)factory.getBean("obj");  
+    e.displayInfo();  
+      
+}  
+}  
+
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
