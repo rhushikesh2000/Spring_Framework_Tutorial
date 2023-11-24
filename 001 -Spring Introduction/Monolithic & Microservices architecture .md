@@ -1,7 +1,8 @@
 ## Monolithic applications 
 If all the functionalities of a project exist in a single codebase, then that application is known as a monolithic application. We all must have designed a monolithic application in our lives in which we were given a problem statement and were asked to design a system with various functionalities. We design our application in various layers like presentation, service, and persistence and then deploy that codebase as a single jar/war file. This is nothing but a monolithic application, where “mono” represents the single codebase containing all the required functionalities. 
 
-![monolithic](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/57d65cba-e0fc-490a-a9b4-ada51e069306)
+<img src="https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/8684ba8d-2595-466a-be15-5399f3f711c1" alt="drawing" width="500" />
+
 
 
 But if we were using monolithic applications already, then what led us to microservices? 
@@ -31,8 +32,10 @@ But if we were using monolithic applications already, then what led us to micros
 It is an architectural development style in which the application is made up of smaller services that handle a small portion of the functionality and data by communicating with each other directly using lightweight protocols like HTTP. According to Sam Newman, “Microservices are the small services that work together.” 
 
 
+<img src="https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/ea97664f-f88b-408d-a8eb-56a98eeaf3fc" alt="drawing" width="500" />
 
-![microservices](https://github.com/rhushikesh2000/Spring_Framework_Tutorial/assets/124034778/730680dc-39a3-443a-936c-161f98835af5)
+
+
 
 
 The Microservice architecture has a significant impact on the relationship between the application and the database. Instead of sharing a single database with other microservices, each microservice has its own database. It often results in duplication of some data, but having a database per microservice is essential if you want to benefit from this architecture, as it ensures loose coupling. Another advantage of having a separate database per microservice is that each microservice can use the type of database best suited for its needs. Each service offers a secure module boundary so that different services can be written in different programming languages. There are many patterns involved in microservice architecture like service discovery & registry, caching, API gateway & communication, observability, security, etc.
